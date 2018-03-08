@@ -1,0 +1,35 @@
+
+        /*
+        //Add target object in list to update.
+        List<Database.saveResult> results = Database.insert(targetRecordsToInsert,false);
+        
+        sObject sourceRec;
+        Database.saveResult sr;
+        
+        //temp copy.
+        List<SObject> sourceRecordset = scopeStore.values();
+        
+        for(Integer index = 0;index < results.size(); index++) {
+            sr = results.get(index);
+            sourceRec = sourceRecordset.get(index);
+            
+            if(!sr.isSuccess()) {
+                //remove source object from updation list.
+                scopeStore.remove(sourceRec.id);
+            }else {
+                //If success, increase successcounter.
+                successCounter++;
+                
+                //At this stage, we should never receive Process_Completion_Identifier_Field__c as null as it is required field on object. 
+                //[To do]: ensure field data type is boolean before setting value. 
+                
+                sourceRec.put(this.currentHeader.Process_Completion_Identifier_Field__c,true);
+            }
+        }
+        
+        //Ensure successCounter is equal to size for Source List, this means we are updating source list correctly.
+        if(scopeStore.values().size() != successCounter) {
+            throw new UtilException(' Mismatch between source records & target records. Discarding batch ');
+        }*/
+        
+        
